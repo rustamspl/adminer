@@ -5,6 +5,8 @@ function adminer_errors($errno, $errstr) {
 }
 
 error_reporting(6135); // errors and warnings
+
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 set_error_handler('adminer_errors', E_WARNING);
 include dirname(__FILE__) . "/adminer/include/version.inc.php";
 include dirname(__FILE__) . "/externals/JsShrink/jsShrink.php";
